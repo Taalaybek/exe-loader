@@ -16,6 +16,6 @@ class Computer extends Model
      *
      * @var array
      */
-    protected $fillable = ['ip'];
+    protected $fillable = ['ip', 'status'];
 
 }
