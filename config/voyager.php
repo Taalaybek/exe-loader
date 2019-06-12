@@ -150,7 +150,8 @@ return [
 
         'widgets' => [
             'TCG\\Voyager\\Widgets\\UserDimmer',
-            'App\\Widgets\\TasksWidget'
+            'App\\Widgets\\TasksWidget',
+            'App\\Widgets\\ComputersWidget'
         ],
 
     ],
