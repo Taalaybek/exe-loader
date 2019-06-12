@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/register-computer', 'ComputerController');
+Route::get('/get-task/{computer}', 'TaskController')->middleware('checkStatus');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });
