@@ -30,7 +30,7 @@ class ComputersWidget extends BaseDimmer
             'text'   => __('Computers', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => 'Computers',
-                'link' => route('voyager.computers.index'),
+                'link' => route('voyager.users.index'),
             ],
             'image' => asset('images/widgets-bg/computers.jpg'),
         ]));

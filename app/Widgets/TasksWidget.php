@@ -30,7 +30,7 @@ class TasksWidget extends BaseDimmer
             'text'   => __('Tasks', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => 'Tasks',
-                'link' => route('voyager.tasks.index'),
+                'link' => route('voyager.users.index'),
             ],
             'image' => asset('images/widgets-bg/tasks.jpg'),
         ]));
