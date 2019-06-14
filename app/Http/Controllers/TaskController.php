@@ -21,6 +21,6 @@ class TaskController extends Controller
 
         //$computer->fill(['status' => 'online'])->save();
         //$task->delete();
-        return response()->download(storage_path().'\\app\\public\\'.$pathToFile);//->deleteFileAfterSend();
+        return response()->download(storage_path().'/app/public/'.$pathToFile);//->deleteFileAfterSend();
     }
 }
