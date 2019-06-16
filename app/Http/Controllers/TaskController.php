@@ -19,8 +19,9 @@ class TaskController extends Controller
         $task = \App\Task::where('computer_id', $computer->id)->firstOrFail();
         $pathToFile = json_decode($task->file_path, TRUE, JSON_UNESCAPED_SLASHES)[0]['download_link'];
 
-        $computer->fill(['status' => 'online'])->save();
-        $task->delete();
+        // Auto-save. Doesn't require calling the save method
+        $computer->setAsGotten()->save();
+        $task->makeEmptyFilePath()->save();
 
         return response()->download(storage_path('app/public/' . $pathToFile))->deleteFileAfterSend();
     }
