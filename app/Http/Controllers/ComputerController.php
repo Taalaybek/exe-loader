@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Computer;
+use App\Services\OverrodeRequest;
 use Illuminate\Http\Request;
 
 class ComputerController extends Controller
@@ -15,7 +16,7 @@ class ComputerController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $computer = Computer::create(['ip' => $request->ip()]);
+        $computer = Computer::create(['ip' => (new OverrodeRequest())->ip()]);
         return response()->json(['status' => 200, 'id' => $computer->id]);
     }
 }
