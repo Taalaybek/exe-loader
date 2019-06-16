@@ -17,4 +17,5 @@ Route::get('/get-task/{computer}', 'TaskController')->middleware('checkStatus');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    Route::post('/login', 'AdminLoginController@postLogin')->name('voyager.login');
 });
