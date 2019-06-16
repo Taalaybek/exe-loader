@@ -18,4 +18,14 @@ class Computer extends Model
      */
     protected $fillable = ['ip', 'status'];
 
+    /**
+     * Replaces status to gotten
+     * @return $this
+     */
+    public function setAsGotten()
+    {
+        $this->status = 'gotten';
+        return $this;
+    }
+
 }
