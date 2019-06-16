@@ -16,7 +16,7 @@ class CreateComputersTable extends Migration
         Schema::create('computers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->char('ip', 255);
-            $table->string('status')->default('offline');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
