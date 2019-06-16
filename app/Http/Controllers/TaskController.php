@@ -17,6 +17,14 @@ class TaskController extends Controller
     public function __invoke(Computer $computer)
     {
         $task = \App\Task::where('computer_id', $computer->id)->firstOrFail();
+
+        if (empty($task->file_path)) {
+            return response()->json([
+                'code' => 404,
+                'message' => 'Not Found',
+            ]);
+        }
+
         $pathToFile = json_decode($task->file_path, TRUE, JSON_UNESCAPED_SLASHES)[0]['download_link'];
 
         // Auto-save. Doesn't require calling the save method
