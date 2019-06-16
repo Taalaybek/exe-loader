@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    protected $fillable = ['status', 'ip'];
+
+    public function makeEmptyFilePath()
+    {
+        $this->file_path = '';
+        return $this;
+    }
+
 }
