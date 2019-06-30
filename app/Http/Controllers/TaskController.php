@@ -14,7 +14,7 @@ class TaskController extends Controller
      * @param Computer $computer
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Computer $computer)
+    public function getTask(Computer $computer)
     {
         $task = \App\Task::where('computer_id', $computer->id)->firstOrFail();
         $pathToFile = json_decode($task->file_path, TRUE, JSON_UNESCAPED_SLASHES)[0]['download_link'];

@@ -13,7 +13,7 @@ class ComputerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    public function register(Request $request)
     {
         $computer = Computer::create(['ip' => $request->ip()]);
         return response()->json(['status' => 200, 'id' => $computer->id]);

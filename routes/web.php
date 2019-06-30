@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/register-computer', 'ComputerController');
-Route::get('/get-task/{computer}', 'TaskController');
+Route::get('/register-computer', 'ComputerController@register');
+Route::get('/get-task/{computer}', 'TaskController@getTask');
 
 
 Route::group(['prefix' => 'admin'], function () {
