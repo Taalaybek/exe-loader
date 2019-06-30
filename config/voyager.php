@@ -149,9 +149,9 @@ return [
         ],
 
         'widgets' => [
-//            'App\\Widgets\\UserDimmer',
-//            'App\\Widgets\\TasksWidget',
-//            'App\\Widgets\\ComputersWidget'
+            'App\\Widgets\\UserDimmer',
+            'App\\Widgets\\TasksWidget',
+            'App\\Widgets\\ComputersWidget'
         ],
 
     ],
